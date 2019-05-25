@@ -1,6 +1,9 @@
 def finder():
     divisor = int(1)
     dividend = int(input("Please enter a number. "))
+    if dividend == 1:
+        print ('1 x 1 = 1')
+        return
     while divisor <= dividend:
         if dividend % divisor == 0:
             multiplyer = dividend/divisor
