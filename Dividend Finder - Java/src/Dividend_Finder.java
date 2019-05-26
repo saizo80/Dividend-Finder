@@ -7,10 +7,10 @@ public class Dividend_Finder {
 		Scanner input = new Scanner(System.in);
 		while (true){
 			finder();
-			System.out.println("Would you like to run again? ");
-			String choice = input.nextLine();
-			input.close();
-			if (choice != "y") {
+			System.out.print("Would you like to run again? Y/N: ");
+			char choice = input.next().charAt(0);
+			if (choice == 'N' || choice == 'n') {
+				input.close();
 				break;
 			}
 		}
@@ -26,7 +26,6 @@ public class Dividend_Finder {
 				System.out.println(divisor + " x " + multiplyer + " = " + dividend);
 			}
 			divisor++;
-		}
-		input.close();					
+		}				
 	}
 }
