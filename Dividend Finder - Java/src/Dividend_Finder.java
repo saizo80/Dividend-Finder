@@ -17,15 +17,37 @@ public class Dividend_Finder {
 	}
 	public static void finder() {
 		int divisor = 1;
+		int multiplyer;
+		int multiplyer_l = 1;
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter the Dividend: ");
-		int dividend = input.nextInt();
-		while (divisor <= dividend){
-			if (dividend%divisor == 0){
-				int multiplyer = dividend/divisor;
-				System.out.println(divisor + " x " + multiplyer + " = " + dividend);
-			}
-			divisor++;
-		}				
+		if (input.hasNextInt()) {
+			int dividend = input.nextInt();
+			while (divisor <= dividend){
+
+				multiplyer = dividend/divisor;
+
+
+				if (dividend%divisor == 0){
+					
+					if (divisor == multiplyer_l && multiplyer_l != 1) {
+						break;
+					}
+					multiplyer_l = multiplyer;
+					System.out.println(divisor + " x " + multiplyer + " = " + dividend);
+				}
+				if (divisor == multiplyer) {
+					break;
+				}
+				divisor++;
+			}		
+		}
+		else {
+			System.out.println("That was not a number.\n");
+			
+			return;
+		}
+		
+		
 	}
 }
