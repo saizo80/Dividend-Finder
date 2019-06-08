@@ -7,14 +7,22 @@
 //
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 int dividend_finder(){
     int dividend;
     int divisor = 1;
     int multiplyer = 1;
-    cout << "Enter a number. ";
-    cin >> dividend;
+    string stop_test;
+    cout << "Enter a number or enter 'e' to return. ";
+    cin >> stop_test;
+    if (stop_test == "e"){
+        return 0;
+    }
+    else{
+        dividend = stoi(stop_test);
+    }
     while (dividend != divisor){
         if (dividend%divisor == 0){
             multiplyer = dividend/divisor;
