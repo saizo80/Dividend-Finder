@@ -14,6 +14,7 @@ int dividend_finder(){
     int dividend;
     int divisor = 1;
     int multiplyer = 1;
+    int multiplyer_l;
     string stop_test;
     cout << "Enter a number or enter 'e' to return. ";
     cin >> stop_test;
@@ -27,8 +28,16 @@ int dividend_finder(){
         if (dividend%divisor == 0){
             multiplyer = dividend/divisor;
             cout << divisor << " x " << multiplyer << " = " << dividend << "\n";
+            multiplyer_l = multiplyer;
+            if (divisor == multiplyer_l){
+                break;
+            }
+            
         }
         divisor++;
+        if (divisor == multiplyer_l){
+            break;
+        }
     }
     return 0;
 }
