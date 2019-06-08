@@ -11,3 +11,6 @@ print out the function for that number.
 It was a very easy thing to program it in Python, and since
 I am now starting to use Java, it seemed fitting to be the
 first thing that I wrote with it. 
+
+I guess I also decided to recode it into C++ just to be 
+thorough.
