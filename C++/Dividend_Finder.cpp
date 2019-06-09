@@ -10,32 +10,46 @@
 #include <string>
 using namespace std;
 
+bool digit_checker(string s){
+    for (int i = 0; i < s.length(); i++){
+        if (isdigit(s[i]) == false){
+            return false;
+        }
+    }
+    return true;
+}
+
 int dividend_finder(){
     int dividend;
     int divisor = 1;
     int multiplyer = 1;
-    int multiplyer_l;
     string stop_test;
     cout << "Enter a number or enter 'e' to return. ";
     cin >> stop_test;
-    if (stop_test == "e"){
+    bool test_stop = digit_checker(stop_test);
+    
+    if (test_stop == false && stop_test != "e"){
+        cout << "Invalid Input.\n";
+        return 0;
+    }
+    else if (test_stop == false && stop_test == "e"){
         return 0;
     }
     else{
         dividend = stoi(stop_test);
     }
+    
     while (dividend != divisor){
         if (dividend%divisor == 0){
             multiplyer = dividend/divisor;
             cout << divisor << " x " << multiplyer << " = " << dividend << "\n";
-            multiplyer_l = multiplyer;
-            if (divisor == multiplyer_l){
+            if (divisor == multiplyer){
                 break;
             }
             
         }
         divisor++;
-        if (divisor == multiplyer_l){
+        if (divisor == multiplyer){
             break;
         }
     }
