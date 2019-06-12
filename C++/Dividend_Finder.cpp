@@ -1,5 +1,5 @@
 //
-//  main.cpp
+//  Dividend Finder
 //  CPP_Test
 //
 //  Created by Matthew Thornton on 6/6/19.
@@ -42,7 +42,8 @@ int dividend_finder(){
     while (dividend != divisor){
         if (dividend%divisor == 0){
             multiplyer = dividend/divisor;
-            cout << divisor << " x " << multiplyer << " = " << dividend << "\n";
+            cout << divisor << " x " << multiplyer << " = "
+            << dividend << "\n";
             if (divisor == multiplyer){
                 break;
             }
