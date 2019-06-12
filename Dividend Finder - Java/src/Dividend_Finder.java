@@ -1,11 +1,10 @@
 import java.util.Scanner;
+
 public class Dividend_Finder {
-	
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+	public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
-		while (true){
+		while (true) {
 			finder();
 			System.out.print("Would you like to run again? Y/N: ");
 			char choice = input.next().charAt(0);
@@ -15,12 +14,13 @@ public class Dividend_Finder {
 			}
 		}
 	}
+
 	public static void finder() {
 		int divisor = 1;
 		int multiplyer;
 		int multiplyer_l = 1;
 		Scanner input = new Scanner(System.in);
-		System.out.print("Enter the Dividend: ");
+		System.out.print("Enter the Dividend or 'e' to cancel: ");
 		if (input.hasNextInt()) {
 			int dividend = input.nextInt();
 			while (divisor <= dividend){
@@ -43,8 +43,13 @@ public class Dividend_Finder {
 			}		
 		}
 		else {
-			System.out.println("That was not a number.\n");
-			
+			char choice = input.next().charAt(0);
+			if (choice == 'e'){
+				return;
+			}
+			else{
+			System.out.println("Invalid input\n");
+			}
 			return;
 		}
 		
