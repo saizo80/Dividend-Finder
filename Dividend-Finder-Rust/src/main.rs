@@ -1,10 +1,18 @@
-//
-// Dividend Finder
-// Created by Olympia Thornton on April 16 2022
-//
-//
+/*
+Dividend Finder
+Created by Olympia Thornton on April 16 2022
+
+This will take a number and print all possible 
+factors. My standard test for a new language.
+
+Note: using unsigned 32bit integers the max
+workable number is 4294867295
+
+*/
+#![allow(non_snake_case)]
 
 fn digit_checker(s: &String) -> bool {
+    // return true if s contains only numbers
     return s.chars().all(char::is_numeric);
 }
 
@@ -14,15 +22,18 @@ fn get_input() -> String {
     std::io::stdin().read_line(&mut line).unwrap();
     println!();
     if let Some('\n')=line.chars().next_back() {line.pop();}
-    //if let Some('\r')=line.chars().next_back() {line.pop();}
+    if let Some('\r')=line.chars().next_back() {line.pop();}
     return line;
 }
 
-fn dividend_finder(dividend: i32) {
-    let mut divisor: i32 = 1;
-    let mut multi: i32 = 1;
+fn dividend_finder(dividend: u32) {
+    // declare variables
+    let mut divisor: u32 = 1;
+    let mut multi: u32 = 1;
 
     while dividend != divisor {
+        // check divisor and multi; if values
+        // are the same break to prevent reprinting
         if divisor != 1 && multi != 1 && divisor == multi {
             break;
         }
@@ -34,7 +45,7 @@ fn dividend_finder(dividend: i32) {
     }
 }
 fn main() {
-    let mut number: i32 = 0;
+    let mut number: u32 = 0;
     let input = get_input();
     if digit_checker(&input) {
         number = input.parse().unwrap();
