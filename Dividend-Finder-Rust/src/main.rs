@@ -1,6 +1,6 @@
 /*
 Dividend Finder
-Created by Olympia Thornton on April 16 2022
+Created by Matthew Thornton on April 16 2022
 
 This will take a number and print all possible 
 factors. My standard test for a new language.
