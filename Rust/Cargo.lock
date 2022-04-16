@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "Dividend-Finder"
+name = "dividend_finder"
 version = "0.1.0"

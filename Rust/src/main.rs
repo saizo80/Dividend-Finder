@@ -9,7 +9,6 @@ Note: using unsigned 32bit integers the max
 workable number is 4294867295
 
 */
-#![allow(non_snake_case)]
 
 fn digit_checker(s: &String) -> bool {
     // return true if s contains only numbers
