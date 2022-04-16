@@ -44,6 +44,7 @@ fn dividend_finder(dividend: u32) {
         divisor += 1;
     }
 }
+
 fn main() {
     let mut number: u32 = 0;
     let input = get_input();
