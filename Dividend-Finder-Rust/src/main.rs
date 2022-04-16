@@ -17,6 +17,22 @@ fn get_input() -> String {
     //if let Some('\r')=line.chars().next_back() {line.pop();}
     return line;
 }
+
+fn dividend_finder(dividend: i32) {
+    let mut divisor: i32 = 1;
+    let mut multi: i32 = 1;
+
+    while dividend != divisor {
+        if divisor != 1 && multi != 1 && divisor == multi {
+            break;
+        }
+        if dividend%divisor == 0 {
+            multi = dividend/divisor;
+            println!("{} x {} = {}",divisor, multi, dividend)
+        }
+        divisor += 1;
+    }
+}
 fn main() {
     let mut number: i32 = 0;
     let input = get_input();
@@ -24,6 +40,6 @@ fn main() {
         number = input.parse().unwrap();
     }
     if number != 0 {
-        // do something here
+        dividend_finder(number);
     }
 }
