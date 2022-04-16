@@ -53,4 +53,7 @@ fn main() {
     if number != 0 {
         dividend_finder(number);
     }
+    else {
+        println!("0 x 0 = 0");
+    }
 }
