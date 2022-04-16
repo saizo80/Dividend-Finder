@@ -26,10 +26,10 @@ fn get_input() -> String {
     return line;
 }
 
-fn dividend_finder(dividend: u32) {
+fn dividend_finder(dividend: u64) {
     // declare variables
-    let mut divisor: u32 = 1;
-    let mut multi: u32 = 1;
+    let mut divisor: u64 = 1;
+    let mut multi: u64 = 1;
 
     while dividend != divisor {
         // check divisor and multi; if values
@@ -45,7 +45,7 @@ fn dividend_finder(dividend: u32) {
     }
 }
 fn main() {
-    let mut number: u32 = 0;
+    let mut number: u64 = 0;
     let input = get_input();
     if digit_checker(&input) {
         number = input.parse().unwrap();
