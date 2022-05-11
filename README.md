@@ -4,5 +4,6 @@ Contrary to the name, a simple script to find and write all the possible divisor
 - Java
 - C++
 - Rust
+- Swift
 
-With my newest addition being [Rust].
+With my newest addition being [Swift].
